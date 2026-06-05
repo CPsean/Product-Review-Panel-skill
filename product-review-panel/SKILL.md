@@ -47,6 +47,8 @@ The P9 / Senior PM Director conducts a pre-review interrogation:
 
 Track all skipped items — they become evidence for The Closer in Step 7.
 
+When intake ends, P9 delivers the **panel announcement** (see `references/templates/intake-dialogue.md` — closing sequence): states the PRD type, names each situational expert and what they will focus on, and gives the total panel count. This announcement is in P9's voice and precedes the formal panel intro card.
+
 ### Step 2 — PRD classification & panel composition
 
 Load `references/workflows/prd-classification.md`. Classify the PRD into one of:
