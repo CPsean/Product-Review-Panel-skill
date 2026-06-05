@@ -45,6 +45,9 @@ The panel automatically switches based on the user's conversation language.
 | **俞军** | 核心 | 用户价值 = 新体验 - 旧体验 - 替换成本 |
 | **大厂 P9 产品总监** | 核心（虚构） | 经验性反对 / 历史失败案例匹配 |
 | **张小龙** | 情境（C 端 / 体验重构） | 克制设计 / 用完即走 |
+| **Steve Jobs** | 情境（消费品 / 产品身份） | 聚焦即说不 / 一句话测试 |
+| **张一鸣** | 情境（内容 / 推荐 / 出海） | 底层投影 / 数据飞轮 |
+| **马斯克** | 情境（成本 / 基建 / 流程） | 白痴指数 / 五步算法 |
 | **The Closer 魔鬼裁判** | 终审（虚构） | 强制收敛 + 翻车前兆信号 |
 
 ### 🌐 International panel
@@ -58,6 +61,7 @@ The panel automatically switches based on the user's conversation language.
 | **Steve Jobs** | Situational (consumer / simplification) | Focus = saying no, one-liner test |
 | **Reid Hoffman** | Situational (pricing / business model) | Network effects, blitzscaling |
 | **Teresa Torres** | Situational (iteration) | Opportunity-solution tree |
+| **Elon Musk** | Situational (platform / cost / infra) | Idiot index, five-step algorithm |
 | **The Closer** | Final arbiter (fictional) | Forced convergence + failure signals |
 
 ---

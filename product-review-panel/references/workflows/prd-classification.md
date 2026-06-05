@@ -30,10 +30,13 @@ Core (always present): Marty Cagan + 俞军 + 大厂 P9 产品总监.
 
 | PRD type | Add situational |
 |---|---|
-| 新功能 | + 张小龙 (if C 端 / 工具类 product) |
-| 迭代优化 | (no situational; core panel is sufficient) |
-| 商业模式 | (no situational available in v1; **note**: this is a gap; recommend adding a Chinese commerce/pricing voice in future) |
-| 体验重构 | + 张小龙 (审美 / 克制视角) |
+| 新功能（C 端 / 工具类，功能性迭代） | + 张小龙（克制 / 减法视角） |
+| 新功能（消费品 / 产品身份定义 / 新品类） | + Steve Jobs（存在性质疑 + 一句话测试） |
+| 迭代优化 | 无情境专家；核心面板已足够 |
+| 商业模式 / 定价 | v1 空缺；建议 v2 补充商业/定价视角 |
+| 体验重构 | + 张小龙（审美 / 克制视角） |
+| 内容 / 推荐 / 平台 / 数据飞轮 / 出海 | + 张一鸣（底层投影 + 飞轮检测） |
+| 成本结构 / 基建 / 流程简化 / build vs buy | + 马斯克（白痴指数 + 五步算法） |
 | 早期探索 | *DEFERRED to v2* |
 
 ## Situational expert mapping — International panel
@@ -42,10 +45,11 @@ Core (always present): Marty Cagan + Clayton Christensen + Senior PM Director.
 
 | PRD type | Add situational |
 |---|---|
-| New feature / Consumer product / Simplification | + Steve Jobs (does this need to exist, one-liner test, focus = saying no) |
+| New feature / Consumer product / Simplification | + Steve Jobs (does this need to exist, one-liner test) |
 | Iteration | + Teresa Torres (opportunity-solution tree validation) |
 | Business model / Pricing | + Reid Hoffman (network effects, growth strategy, timing) |
 | UX redesign | + Don Norman (affordances, mental models) |
+| Platform / Infra / Cost structure / Build vs buy | + Elon Musk (idiot index, five-step algorithm) |
 | Early-stage exploration | *DEFERRED to v2* |
 
 ## Panel size targets
