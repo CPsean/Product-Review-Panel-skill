@@ -55,7 +55,7 @@ The panel automatically switches based on the user's conversation language.
 | **Clayton Christensen** | Core | Jobs to Be Done |
 | **Senior PM Director** | Core (fictional) | Experiential opposition |
 | **Don Norman** | Situational (UX redesign) | Affordances, mental models |
-| **Tony Fadell** | Situational (new feature) | Story-first, "first 5 seconds" |
+| **Steve Jobs** | Situational (consumer / simplification) | Focus = saying no, one-liner test |
 | **Reid Hoffman** | Situational (pricing / business model) | Network effects, blitzscaling |
 | **Teresa Torres** | Situational (iteration) | Opportunity-solution tree |
 | **The Closer** | Final arbiter (fictional) | Forced convergence + failure signals |

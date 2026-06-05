@@ -42,7 +42,7 @@ Core (always present): Marty Cagan + Clayton Christensen + Senior PM Director.
 
 | PRD type | Add situational |
 |---|---|
-| New feature | + Tony Fadell (story-first, "first 5 seconds" craft) |
+| New feature / Consumer product / Simplification | + Steve Jobs (does this need to exist, one-liner test, focus = saying no) |
 | Iteration | + Teresa Torres (opportunity-solution tree validation) |
 | Business model / Pricing | + Reid Hoffman (network effects, growth strategy, timing) |
 | UX redesign | + Don Norman (affordances, mental models) |
