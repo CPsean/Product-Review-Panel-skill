@@ -1,0 +1,17 @@
+{
+  "skill_name": "product-review-panel",
+  "evals": [
+    {"query": "评审一下我这份 PRD", "should_trigger": true},
+    {"query": "review my PRD with the expert panel", "should_trigger": true},
+    {"query": "这个功能到底要不要做？帮我拿个主意", "should_trigger": true},
+    {"query": "should I build this feature? give me a critical second opinion", "should_trigger": true},
+    {"query": "帮我的定价方案做个 GO / NO-GO 评审", "should_trigger": true},
+    {"query": "panel review this product proposal before I commit engineering resources", "should_trigger": true},
+    {"query": "我写了个需求文档，找几个产品大师视角挑挑毛病", "should_trigger": true},
+    {"query": "stress-test this proposal across product and UX dimensions", "should_trigger": true},
+    {"query": "我只有一个想法还没写 PRD，帮我脑暴一下方向", "should_trigger": false},
+    {"query": "review this microservice architecture and pick the right database", "should_trigger": false},
+    {"query": "帮我把这 20 份用户访谈记录做主题归纳", "should_trigger": false},
+    {"query": "what's our company's market strategy for next year", "should_trigger": false}
+  ]
+}

@@ -1,5 +1,6 @@
 ---
 name: product-review-panel
+version: 1.1.0
 description: Convene a multi-expert panel to review a Product Requirements Document (PRD) and deliver a binding verdict (GO / NO-GO / CONDITIONAL GO) with dissenting opinions preserved as first-class output. Use when a Product Manager wants critical review of a written PRD, when deciding whether to build a specific feature, when stress-testing a proposal across product / UX / business-model dimensions, or for a structured "second opinion" before committing engineering resources. The panel adapts to the user's conversation language (Chinese → Cagan + 俞军 + 大厂 P9 产品总监 + situational like 张小龙; English/other → Cagan + Christensen + Senior PM Director + situational like Norman, Jobs, Hoffman, Torres). Every review ends with a verdict from "The Closer" (魔鬼裁判) plus observable failure signals to monitor. Do NOT use for pre-PRD idea brainstorming, purely technical architecture reviews, non-product strategy questions, or user research synthesis — use other skills for those.
 ---
 
@@ -64,15 +65,18 @@ Based on the classification, select 1-2 situational experts and combine with the
 
 Print the "出场卡" using format from `references/templates/panel-intro-card.md`. One row per expert: name + credential + framework + signature question.
 
-### Step 4 — Round 1: parallel reviews
+### Step 4 — Round 1: parallel independent reviews
 
-Each expert (loaded from `references/personas/experts-{cn|intl}.md`) gives exactly:
+**Default: dispatch one sub-agent per expert, in parallel** — follow `references/workflows/parallel-review.md` for the dispatch prompt, isolation rules, and return format. Each sub-agent sees only the PRD, the Step 1 intake log, and its own persona section; experts cannot see each other, which makes the independence real rather than simulated. If the runtime has no sub-agent support, fall back to single-context generation as described in that file (and mark the fallback on the panel intro card).
+
+Each expert (persona loaded from `references/personas/experts-{cn|intl}.md`) returns exactly:
 
 1. **倾向标签**: 倾向 GO / 倾向 NO-GO / 倾向 CONDITIONAL
-2. **≤ 80-word rationale** in their voice and framework
-3. **One follow-up question** they'd want the PM to answer
+2. **致命缺陷字段**: 无 / Cagan 四风险之一的不可恢复缺陷（feeds the Closer's Step A hard-objection check）
+3. **≤ 80-word rationale** in their voice and framework
+4. **One follow-up question** they'd want the PM to answer
 
-**No scoring numbers.** Only tendency labels. Numbers create false precision.
+**No scoring numbers.** Only tendency labels. Numbers create false precision. The main thread records sub-agent returns **verbatim** — tendency labels are never rewritten.
 
 ### Step 5 — Tendency direction check
 
@@ -81,11 +85,13 @@ Each expert (loaded from `references/personas/experts-{cn|intl}.md`) gives exact
 
 ### Step 6 — Round 2: pointed debate
 
-Pick the **strongest GO-leaning expert** and the **strongest NO-GO-leaning expert**. One exchange only:
+Runs **in the main thread** (no sub-agents). Pick the **strongest GO-leaning expert** and the **strongest NO-GO-leaning expert** from the independent Round 1 returns. One exchange only:
 
 - GO expert states the strongest case against the NO-GO expert's position
 - NO-GO expert responds
 - End. No further rounds. No relay debate.
+
+Quotes must come from the sub-agents' actual Round 1 text; the main thread may extend an expert's reasoning in their persona's framework but must never alter their Round 1 tendency label. Where a main-thread consensus would contradict an independent sub-agent opinion, the sub-agent opinion wins.
 
 ### Step 7 — The Closer: final verdict
 
@@ -130,6 +136,8 @@ These are hard constraints. The skill must never violate them.
 
 6. **Dissent must always be preserved.** Even when verdict is unanimous, if a minor concern existed in Round 1, it goes in the dissent section.
 
+7. **Independent sub-agent opinions outrank main-thread consensus.** Round 1 is dispatched as parallel isolated sub-agents by default (see `references/workflows/parallel-review.md`). The main thread records their tendency labels verbatim and must never rewrite a label to fit a tidier narrative. If the runtime cannot spawn sub-agents, fall back to single-context generation and mark the fallback on the panel intro card.
+
 ## Input handling
 
 Accept any input form the runtime supports:
@@ -147,8 +155,8 @@ If no PRD is provided at invocation, ask the PM to share one before starting Ste
 | 1 | `references/personas/p9-director.md`, `references/templates/intake-dialogue.md`, `references/workflows/information-gap-check.md` |
 | 2 | `references/workflows/prd-classification.md`, `references/personas/experts-{cn|intl}.md` |
 | 3 | `references/templates/panel-intro-card.md` |
-| 4 | `references/personas/experts-{cn|intl}.md` |
-| 6 | `references/personas/experts-{cn|intl}.md` |
+| 4 | `references/workflows/parallel-review.md`, `references/personas/experts-{cn|intl}.md` |
+| 6 | `references/workflows/parallel-review.md`, `references/personas/experts-{cn|intl}.md` |
 | 7 | `references/personas/closer.md`, `references/workflows/verdict-logic.md` |
 | 8 | `references/templates/output-structure.md` |
 

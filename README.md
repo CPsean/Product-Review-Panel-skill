@@ -73,7 +73,7 @@ The panel automatically switches based on the user's conversation language.
 1. P9 intake interrogation            — pushes PM for missing info, max 5 turns
 2. PRD classification                 — determines situational expert(s)
 3. Panel intro card                   — credentials + frameworks + signature questions
-4. Round 1: parallel reviews          — each expert: tendency + ≤80-word rationale + 追问
+4. Round 1: parallel reviews          — each expert = an isolated parallel sub-agent (no cross-visibility → no anchoring); returns tendency + fatal-flaw field + ≤80-word rationale + 追问
 5. Tendency direction check           — split → Round 2 / unanimous → skip to 7
 6. Round 2: pointed debate            — strongest GO vs strongest NO-GO, one exchange
 7. The Closer: final verdict          — GO / NO-GO / CONDITIONAL GO + conditions + failure signals
@@ -220,9 +220,9 @@ Each file is self-contained — you can edit one without touching others.
 ## 🗺 路线图 / Roadmap
 
 - [x] **v1**: PRD review (the case where a PM already has a written PRD)
+- [x] **v1.1**: Sub-agent parallelization for Round 1 — each expert is now an isolated parallel sub-agent, so opinion independence is real rather than simulated (removes single-context anchoring). See [CHANGELOG.md](./CHANGELOG.md)
 - [ ] **v2**: Early-stage exploration (the case where the PM has only an idea, no PRD yet) — different panel composition, different discussion depth, more JTBD-heavy
 - [ ] **v2+**: 中文面板的商业模式 / 定价情境专家 — 目前是 gap
-- [ ] **v2+**: Sub-agent parallelization for Round 1 (currently single-threaded; parallel would improve opinion diversity)
 
 ---
 
