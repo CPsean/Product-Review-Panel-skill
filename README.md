@@ -221,8 +221,6 @@ Each file is self-contained — you can edit one without touching others.
 
 - [x] **v1**: PRD review (the case where a PM already has a written PRD)
 - [x] **v1.1**: Sub-agent parallelization for Round 1 — each expert is now an isolated parallel sub-agent, so opinion independence is real rather than simulated (removes single-context anchoring). See [CHANGELOG.md](./CHANGELOG.md)
-- [ ] **v2**: Early-stage exploration (the case where the PM has only an idea, no PRD yet) — different panel composition, different discussion depth, more JTBD-heavy
-- [ ] **v2+**: 中文面板的商业模式 / 定价情境专家 — 目前是 gap
 
 ---
 
