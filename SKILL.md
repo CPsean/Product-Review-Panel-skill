@@ -1,6 +1,6 @@
 ---
 name: product-review-panel
-version: 1.1.0
+version: 1.2.0
 description: Convene a multi-expert panel to review a Product Requirements Document (PRD) and deliver a binding verdict (GO / NO-GO / CONDITIONAL GO) with dissenting opinions preserved as first-class output. Use when a Product Manager wants critical review of a written PRD, when deciding whether to build a specific feature, when stress-testing a proposal across product / UX / business-model dimensions, or for a structured "second opinion" before committing engineering resources. The panel adapts to the user's conversation language (Chinese → Cagan + 俞军 + 大厂 P9 产品总监 + situational like 张小龙; English/other → Cagan + Christensen + Senior PM Director + situational like Norman, Jobs, Hoffman, Torres). Every review ends with a verdict from "The Closer" (魔鬼裁判) plus observable failure signals to monitor. Do NOT use for pre-PRD idea brainstorming, purely technical architecture reviews, non-product strategy questions, or user research synthesis — use other skills for those.
 ---
 
@@ -102,6 +102,7 @@ The Closer:
 - Runs the verdict decision tree
 - Quotes 1-2 specific expert phrases as supporting evidence
 - Cites P9's skip log if applicable
+- **Runs the first-principles challenge on every verdict** (需求存在性 + 底层拆解, 1-2 lines) — the Closer carries this lens because the first-principles personas (马斯克 / 张一鸣) are situational and often not convened
 - Issues final verdict
 - If CONDITIONAL GO: lists concrete conditions, each with a deadline
 - Lists 2+ "翻车前兆信号" — observable signals that would invalidate the verdict

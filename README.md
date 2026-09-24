@@ -76,7 +76,7 @@ The panel automatically switches based on the user's conversation language.
 4. Round 1: parallel reviews          — each expert = an isolated parallel sub-agent (no cross-visibility → no anchoring); returns tendency + fatal-flaw field + ≤80-word rationale + 追问
 5. Tendency direction check           — split → Round 2 / unanimous → skip to 7
 6. Round 2: pointed debate            — strongest GO vs strongest NO-GO, one exchange
-7. The Closer: final verdict          — GO / NO-GO / CONDITIONAL GO + conditions + failure signals
+7. The Closer: final verdict          — first-principles challenge (需求存在性 + 底层拆解) on every verdict → GO / NO-GO / CONDITIONAL GO + conditions + failure signals
 8. Dissent section                    — minority view + observable failure signals
 ```
 
@@ -221,6 +221,7 @@ Each file is self-contained — you can edit one without touching others.
 
 - [x] **v1**: PRD review (the case where a PM already has a written PRD)
 - [x] **v1.1**: Sub-agent parallelization for Round 1 — each expert is now an isolated parallel sub-agent, so opinion independence is real rather than simulated (removes single-context anchoring). See [CHANGELOG.md](./CHANGELOG.md)
+- [x] **v1.2**: First-principles challenge in The Closer — every verdict now gets a domain-agnostic "does this requirement deserve to exist / is this attacking the root or a symptom" check, so first-principles scrutiny no longer depends on whether 马斯克 / 张一鸣 happen to be convened. See [CHANGELOG.md](./CHANGELOG.md)
 
 ---
 
